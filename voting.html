@@ -1,0 +1,32 @@
+<!-- voting.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Voting Page</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/app.js"></script>
+</head>
+<body onload="loadVotingPage()">
+    <header>
+        <img src="images/felogo.png" alt="Logo">
+    </header>
+    <div class="container">
+        <h1 id="display-text"></h1>
+        <div id="emoji-container">
+            <img src="images/very-mad.png" alt="Very Mad" onclick="handleEmojiClick(1)">
+            <img src="images/mad.png" alt="Mad" onclick="handleEmojiClick(2)">
+            <img src="images/neutral.png" alt="Neutral" onclick="handleEmojiClick(3)">
+            <img src="images/happy.png" alt="Happy" onclick="handleEmojiClick(4)">
+            <img src="images/very-happy.png" alt="Very Happy" onclick="handleEmojiClick(5)">
+        </div>
+        <div id="thank-you-message">Thank you for your feedback!</div>
+        <div class="navigation-buttons">
+            <button onclick="finishVoting()">Finish Voting</button>
+        </div>
+    </div>
+    <footer>
+        <button onclick="goHome()">Home</button>
+    </footer>
+</body>
+</html>

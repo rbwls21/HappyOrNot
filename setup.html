@@ -1,0 +1,39 @@
+<!-- setup.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Setup Page</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/app.js"></script>
+</head>
+<body onload="autoFillDateTime()">
+    <header>
+        <img src="images/felogo.png" alt="Logo">
+    </header>
+    <div class="container">
+        <h1>Setup Your Feedback Session</h1>
+        <form id="setup-form" onsubmit="saveSetupData(); return false;">
+            <label for="project-name">Project Name: *</label>
+            <input type="text" id="project-name" required>
+
+            <label for="display-text">Display Text: *</label>
+            <input type="text" id="display-text" required>
+
+            <label for="date">Date and Time: *</label>
+            <input type="datetime-local" id="date" required>
+
+            <label for="description">Description:</label>
+            <textarea id="description" rows="4"></textarea>
+
+            <label for="custom-info">Custom Information:</label>
+            <textarea id="custom-info" rows="4"></textarea>
+
+            <button type="submit">Start Voting</button>
+        </form>
+    </div>
+    <footer>
+        <button onclick="goHome()">Home</button>
+    </footer>
+</body>
+</html>

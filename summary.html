@@ -1,0 +1,58 @@
+<!-- summary.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Summary Page</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/app.js"></script>
+
+    <!-- Include Chart.js from CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Include jsPDF from CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body onload="loadSummaryPage()">
+    <header>
+        <img src="images/felogo.png" alt="Logo">
+    </header>
+    <div class="container">
+        <h1>Feedback Summary</h1>
+        <div id="summary-info">
+            <p><strong>Project Name:</strong> <span id="summary-project-name"></span></p>
+            <p><strong>Display Text:</strong> <span id="summary-display-text"></span></p>
+            <p><strong>Date & Time:</strong> <span id="summary-date"></span></p>
+            <p><strong>Description:</strong> <span id="summary-description"></span></p>
+            <p><strong>Custom Information:</strong> <span id="summary-custom-info"></span></p>
+        </div>
+        <div id="metrics">
+            <div class="metric-box">
+                <h2 id="total-responses">0</h2>
+                <p>Total Responses</p>
+            </div>
+            <div class="metric-box">
+                <h2 id="average-score">0</h2>
+                <p>Average Satisfaction Score</p>
+            </div>
+            <div class="metric-box">
+                <h2 id="positive-percentage">0%</h2>
+                <p>Positive Response Percentage</p>
+            </div>
+            <div class="metric-box">
+                <h2 id="negative-percentage">0%</h2>
+                <p>Negative Response Percentage</p>
+            </div>
+        </div>
+        <div id="pie-chart-container" style="height: 400px;">
+            <canvas id="pie-chart"></canvas>
+        </div>
+        <div class="navigation-buttons">
+            <button id="download-btn" onclick="downloadPDF()">Download as PDF</button>
+        </div>
+    </div>
+    <footer>
+        <button onclick="goHome()">Home</button>
+    </footer>
+</body>
+</html>
